@@ -1,10 +1,16 @@
 import React from 'react';
 import AddTodo from '../Components/AddTodo';
+import DiffTodoList from '../Components/DiffTodoList';
 
 const TODOHome = () => {
     return (
         <div>
-           <AddTodo></AddTodo>
+           {/* <AddTodo></AddTodo> */}
+         <div style={{display : 'flex', width : '120%', overflow : 'auto'}}> { ['Incomplete','To Do','Doing','Under Review','Completed','OverDue']
+           .map((item, index) => <DiffTodoList type={item}></DiffTodoList>
+           )}
+           </div>
+           
         </div>
     );
 };
